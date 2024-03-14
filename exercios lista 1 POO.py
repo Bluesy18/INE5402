@@ -4,7 +4,7 @@
 
 ###1003###
 
-#usuário digita dois valores#
+#usuário digita dois valores
 A = int(input("Digite um número: "))
 B = int(input("Digite um número: "))
 
@@ -16,7 +16,7 @@ print(f"SOMA = {SOMA}")
 
 ###1004###
 
-#usuário digita dois valores#
+#usuário digita dois valores
 a = int(input("Digite um número: "))
 b = int(input("Digite um número: "))
 
@@ -28,19 +28,20 @@ print(f"PROD = {PROD}")
 
 ###1005###
 
-#usuário digita suas notas#
+#usuário digita suas notas
 A = float(input("Digite sua nota (de 0 a 10, com uma casa após o ponto): "))
 B = float(input("Digite sua outra nota (de 0 a 10, com uma casa após o ponto): "))
 
-#atribuindo os pesos#
+#atribuindo os pesos
 AP = A*3.5
 BP = B*7.5
 
 #media ponderada#
 media = (AP+BP)/11
+mediaA = round(media, 5)
 
 #resultado#
-print(f"MEDIA = {media}")
+print(f"MEDIA = {mediaA}")
 
 ###1009###
 
