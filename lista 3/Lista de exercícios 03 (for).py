@@ -173,7 +173,7 @@ for i in range(1, 6):
       quit()  
     else:
       # Soma as notas
-      somanota += nota
+      somaNota += nota
 
       # Verificar qual aluno tirou a melhor nota
       if(i == 1):
