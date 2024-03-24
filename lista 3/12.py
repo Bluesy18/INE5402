@@ -1,7 +1,7 @@
 ### 12 ###
 
 # Cria variável de soma
-somadist = 0
+somaDist = 0
 soma1520 = 0
 
 # Usuário digita quantidade de praias que irá inserir
@@ -13,7 +13,7 @@ for i in range(n):
     dist = int(input("Digite sua distância em relação ao centro (em km): "))
 
     # Soma as distâncias digitadas
-    somadist += dist
+    somaDist += dist
 
     # Verifica se a distância da praia até o centro está entre 15 a 20 km
     if(20 >= dist >= 15):
@@ -31,7 +31,7 @@ for i in range(n):
           mPraia = praia
     
 # Calcula a distância média das praias até o centro
-media = round((somadist/n), 1)
+media = round((somaDist/n), 1)
 
 # Mostra qual é a praia mais distante do centro, quantidade de praias com a distância entre 15 e 20 km e a distância média das praias
-print(f"A praia mais distante do centro é a praia {mPraia}\nExistem {soma1520} praia (s) com uma distância entre 15 a 20 km\nA distância média das praias é de {media} km")
+print(f"A praia mais distante do centro é a praia {mPraia}\nExistem {soma1520} praia(s) com uma distância entre 15 a 20 km\nA distância média das praias é de {media} km")

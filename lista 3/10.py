@@ -1,7 +1,7 @@
 ### 10 ###
 
 # Cria variáveis de soma e de situação
-somanota = 0
+somaNota = 0
 situacao = ""
 
 for i in range(1, 6):
@@ -28,7 +28,7 @@ for i in range(1, 6):
               mNota = nota
 
 # Calcula a média das notas
-media = round((somanota/5), 2)
+media = round((somaNota/5), 2)
 
 # Determina a situação do melhor aluno
 if(mNota >= 5.75):

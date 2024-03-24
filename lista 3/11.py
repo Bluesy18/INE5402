@@ -1,7 +1,7 @@
 ### 11 ###
 
 # Cria variável de soma
-somanum = 0
+somaNum = 0
 
 # Usuário digita quantidade de números que irá inserir
 n = int(input("Digite a quantidade n de números que serão lidos pelo teclado: "))
@@ -11,7 +11,7 @@ for i in range (n):
   num = int(input("Digite um número inteiro: "))
   
   # Soma os números digitados
-  somanum += num
+  somaNum += num
 
   # Verifica o maior e o menor número
   if(i == 0):
@@ -27,7 +27,7 @@ for i in range (n):
           meNum = num
 
 # Calcula a média dos números digitados
-media = somanum/n
+media = somaNum/n
 
 # Mostra a média, o maior e o menor número
 print(f"A média entre os números foi {media}, o maior número foi {maNum} e o menor número foi {meNum}")
