@@ -1,14 +1,18 @@
-''' 1 '''
+### 1 ###
+
+# Cria variável de resposta
 r = "S"
 
+# Cria variáveis dos jogadores
 j1 = "pedra"
 j2 = "papel"
 
 while r=="S":
+    # Jogadores decidem jogada
     j1 = input("Digite pedra, papel ou tesoura: ").lower()
     j2 = input("Digite pedra, papel ou tesoura: ").lower()
     
-    
+    # Verifica escolhas e mostra resultado
     if(j1 == j2):
         r = input("Empatou. Deseja continuar jogando? (S/N): ").upper()
         
