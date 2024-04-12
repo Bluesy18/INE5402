@@ -1,16 +1,7 @@
-''' 2 '''
-somaNota = 0
-mNota = 0
-mNome = 0
-media = 0
+### 2 ###
 
-def notas(nome, nota):
-    
-      global somaNota
-      global mNota
-      global mNome
-      global media
-    
+# Função calcula melhor nota e media
+def notas(nome, nota, mNome, mNota, somaNota, media):
       # Soma as notas
       somaNota += nota
       # Verificar qual aluno tirou a melhor nota
@@ -25,16 +16,19 @@ def notas(nome, nota):
                   
       # Calcula a média das notas
       media = round((somaNota/i), 2)
-                  
-                  
-      return media, mNome, mNota
+
+      # Retorna seguintes variáveis
+      return media, mNome, mNota, somaNota
     
+# Função verifica se nota obedece os limites, se não, pede outro input
 def verifica(nota):
-    if((nota < 0) or (nota > 10)):
-      print("Nota inválida.")
-      quit()
-      
+    while ((nota < 0) or (nota > 10)):
+      nota = round(float(input("Nota inválida. Digite novamente: ")), 2)
+
+# Função define situação do melhor aluno
 def situacao(mNota):
+
+    # Interpreta a melhor nota e define situação
     if(mNota >= 5.75):
         situacao = "aprovado"
 
@@ -43,18 +37,30 @@ def situacao(mNota):
 
     elif(mNota < 2.75):
         situacao = "reprovado"
-        
+
+    # Retorna a situação 
     return situacao
     
+# Define variáveis
+mNome = ""
+mNota = 0
+somaNota = 0
+media = 0
     
-
+# Faz seguintes procedimentos ara 5 alunos diferentes
 for i in range(1, 6):
     # Usuário digita o nome dos alunos e das notas
     nome = input("Digite seu nome: ")
     nota = round(float(input("Digite sua nota média (entre 0 e 10): ")), 2)
+
+    # Chama função verifica()
     verifica(nota)
-    notas(nome, nota)
+
+    # Armazena valores retornados
+    media, mNome, mNota, somaNota = notas(nome, nota, mNome, mNota, somaNota, media)
     
+# Chama função situacao()
 situacao(mNota)
 
+# Mostra qual foi o melhor aluno, sua nota e situação, além da média da turma
 print(f"A pessoa com a melhor nota foi o(a): {mNome} \nSua nota foi: {mNota}\nEle/Ela foi {situacao(mNota)}\nA média da turma foi: {media}")
