@@ -1,11 +1,15 @@
 ### 3 ###
 
+# Cria tupla
 tupla = (6,8,4,9,2,5,7,3,10,1)
 
+# Converte tupla e lista
 lista = list(tupla)
 
+# Cria cópia da lista
 lista0 = lista[:]
 
+# Organiza lista de forma crescente
 for i in range(9):
         if lista[0] > lista[1]:
             lista[0], lista[1] = lista[1], lista[0]
@@ -25,7 +29,8 @@ for i in range(9):
             lista[7], lista[8] = lista[8], lista[7]
         if lista[8] > lista[9]:
             lista[8], lista[9] = lista[9], lista[8]
-            
+
+# Mostra qual o maior e o menor número da tupla
 print(f"A posição do maior número da tupla é {lista0.index(lista[9])} e do menor é {lista0.index(lista[0])}")
 
 
